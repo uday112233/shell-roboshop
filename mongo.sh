@@ -24,9 +24,6 @@ VALIDATE(){
     fi
 }
 
-cp mongo1.repos /etc/yum.repos.d/mongo.repo &>>$LOG_FILE
-
-VALIDATE $? "copied mongo into yum.repos.d"
 yum install mongodb-org -y &>>$LOG_FILE
 
 VALIDATE $? "installing mongodb"  # corrected the validation message
