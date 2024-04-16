@@ -28,7 +28,9 @@ cp mongo1.repos /etc/yum.repos.d/mongo1.repos &>>$LOG_FILE
 
 VALIDATE $? "copied mongo into yum.repos.d"
 yum install mongodb-org -y &>>$LOG_FILE
-VALIDATE $? "installing mongodb"
+
+VALIDATE $? "installing mongodb"  # corrected the validation message
+
 systemctl enable mongod
 VALIDATE $? "enabling"
 systemctl start mongod
