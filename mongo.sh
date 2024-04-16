@@ -35,5 +35,8 @@ VALIDATE $? "installing mongodb"  # corrected the validation message
 systemctl enable mongod
 VALIDATE $? "enabling"
 systemctl start mongod
+VALIDATE $? "enabling"
 sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+VALIDATE $? "enabling"
 systemctl restart mongod
+VALIDATE $? "enabling"
