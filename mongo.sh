@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=$( date +%F )
-LOG_DIR=/home/ec2-user/roboshop-logs
+LOG_DIR=/home/ec2-user
 LOG_FILE=$LOG_DIR/$0-$DATE.log
 USERID=$( id -u )
 R="\e[31m"
